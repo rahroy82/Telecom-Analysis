@@ -14259,15 +14259,12 @@ a.anchor-link {
 
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Telecom-Customer-Churn">Telecom Customer Churn<a class="anchor-link" href="#Telecom-Customer-Churn">&#182;</a></h1><ol>
-<li><strong>Business Understanding</strong> – High customer churn rate. How can we identify and reduce and/or eliminate churn</li>
-<li><strong>Data Understanding</strong> – Explore distributions, what columns will contribute to model prediction</li>
-<li><strong>Data Preparation</strong> – Clean, encode, scale, and split the data.</li>
-<li><strong>Modeling</strong> – Train baseline and tuned classification models.</li>
-<li><strong>Evaluation</strong> – Assess models using standard classification metrics.</li>
-<li><strong>Deployment / Recommendations</strong> – Translate findings into business actions.</li>
-</ol>
-
+<h1 id="Telecom-Customers">Telecom Customers<a class="anchor-link" href="#Telecom-Customers">&#182;</a></h1>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="Business-Understanding-&#8211;-High-customer-churn-rate."><strong>Business Understanding</strong> &#8211; High customer churn rate.<a class="anchor-link" href="#Business-Understanding-&#8211;-High-customer-churn-rate.">&#182;</a></h1><h3 id="How-can-we-identify-and-reduce-and/or-eliminate-churn-in-order-to-improve-management-decision-on-retaining-or-acquire-new-customers">How can we identify and reduce and/or eliminate churn in order to improve management decision on retaining or acquire new customers<a class="anchor-link" href="#How-can-we-identify-and-reduce-and/or-eliminate-churn-in-order-to-improve-management-decision-on-retaining-or-acquire-new-customers">&#182;</a></h3>
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
@@ -14281,7 +14278,7 @@ We start by importing data structures and manipulation library, numerical comput
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[80]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Core</span>
@@ -14310,14 +14307,14 @@ We start by importing data structures and manipulation library, numerical comput
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Load-and-Explore-the-Dataset">Load and Explore the Dataset<a class="anchor-link" href="#Load-and-Explore-the-Dataset">&#182;</a></h2><p>Load the telecom churn dataset into a pandas DataFrame, preview its structure, and inspect data types.<br>
+<h1 id="Data-Understanding-&#8211;-Explore-distributions"><strong>Data Understanding</strong> &#8211; Explore distributions<a class="anchor-link" href="#Data-Understanding-&#8211;-Explore-distributions">&#182;</a></h1><h3 id="what-columns-will-contribute-to-model-prediction">what columns will contribute to model prediction<a class="anchor-link" href="#what-columns-will-contribute-to-model-prediction">&#182;</a></h3><h2 id="Load-and-Explore-the-Dataset">Load and Explore the Dataset<a class="anchor-link" href="#Load-and-Explore-the-Dataset">&#182;</a></h2><p>Load the telecom churn dataset into a pandas DataFrame, preview its structure, and inspect data types.<br>
 This helps confirm the target variable and overall data quality before cleaning.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[81]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Understanding the dataset structure</span>
@@ -14480,14 +14477,14 @@ This helps confirm the target variable and overall data quality before cleaning.
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Clean-Column-Names">Clean Column Names<a class="anchor-link" href="#Clean-Column-Names">&#182;</a></h2><p>Normalize and clean column names by removing spaces, punctuation, and inconsistencies.<br>
+<h1 id="Data-Preparation-&#8211;-Clean,-encode,-scale,-and-split-the-data."><strong>Data Preparation</strong> &#8211; Clean, encode, scale, and split the data.<a class="anchor-link" href="#Data-Preparation-&#8211;-Clean,-encode,-scale,-and-split-the-data.">&#182;</a></h1><h2 id="Clean-Column-Names">Clean Column Names<a class="anchor-link" href="#Clean-Column-Names">&#182;</a></h2><p>Normalize and clean column names by removing spaces, punctuation, and inconsistencies.<br>
 This ensures column names are standardized for smooth downstream processing.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[82]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Clean up column names</span>
@@ -14519,7 +14516,7 @@ Convert them to numeric (1 for churn, 0 for non-churn) for modeling.</p>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[83]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Check target distribution</span>
@@ -14648,7 +14645,7 @@ Encoded churn distribution:
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[84]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Separate features/independent variable and target/dependent variable</span>
@@ -14672,7 +14669,7 @@ This guides preprocessing — scaling for numeric data, encoding for categorical
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[85]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Identify categorical vs numeric features</span>
@@ -14723,7 +14720,7 @@ If any are found, drop those rows to maintain clean input for training.</p>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[86]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Checking if there are any missing values</span>
@@ -14773,7 +14770,7 @@ This prepares the data for unbiased model evaluation.</p>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[87]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Split train/test sets</span>
@@ -14799,7 +14796,7 @@ This prepares the data for unbiased model evaluation.</p>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[87]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[25]:</div>
 
 
 
@@ -14828,7 +14825,7 @@ This ensures consistent, model-ready data transformation.</li>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[88]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[26]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Preprocess (encode categorical, scale numeric)</span>
@@ -14864,7 +14861,7 @@ Review summary statistics to confirm feature integrity before training.</p>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[89]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[27]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Verifying class balance and basics stats</span>
@@ -15168,14 +15165,14 @@ Name: proportion, dtype: float64</pre>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Logistic-Regression-(Baseline-Model)">Logistic Regression (Baseline Model)<a class="anchor-link" href="#Logistic-Regression-(Baseline-Model)">&#182;</a></h2><p>Train an interpretable Logistic Regression model as the baseline.<br>
+<h1 id="Modeling-&#8211;-Train-baseline-and-tuned-classification-models."><strong>Modeling</strong> &#8211; Train baseline and tuned classification models.<a class="anchor-link" href="#Modeling-&#8211;-Train-baseline-and-tuned-classification-models.">&#182;</a></h1><h2 id="Logistic-Regression-(Baseline-Model)">Logistic Regression (Baseline Model)<a class="anchor-link" href="#Logistic-Regression-(Baseline-Model)">&#182;</a></h2><p>Train an interpretable Logistic Regression model as the baseline.<br>
 Evaluate performance with Accuracy, Precision, Recall, F1 Score, and ROC-AUC metrics.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[90]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[28]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># =============================================</span>
@@ -15317,7 +15314,7 @@ Visualize results with a Confusion Matrix and ROC Curve for comparison.</p>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[91]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[29]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># ============================================</span>
@@ -15451,7 +15448,7 @@ This prevents overfitting and improves model generalization to unseen data.</p>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[92]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[30]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># ============================================</span>
@@ -15600,14 +15597,14 @@ ROC-AUC:   0.844
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Model-Comparison-and-Interpretation">Model Comparison and Interpretation<a class="anchor-link" href="#Model-Comparison-and-Interpretation">&#182;</a></h2><p>Compare Logistic Regression and Tuned Decision Tree models.<br>
+<h1 id="Evaluation-&#8211;-Assess-models-using-standard-classification-metrics.">Evaluation &#8211; Assess models using standard classification metrics.<a class="anchor-link" href="#Evaluation-&#8211;-Assess-models-using-standard-classification-metrics.">&#182;</a></h1><h2 id="Model-Comparison-and-Interpretation">Model Comparison and Interpretation<a class="anchor-link" href="#Model-Comparison-and-Interpretation">&#182;</a></h2><p>Compare Logistic Regression and Tuned Decision Tree models.<br>
 Visualize metrics (Accuracy, Precision, Recall, F1, ROC-AUC) to identify the stronger performer.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[93]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[31]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># ============================================</span>
@@ -15795,7 +15792,7 @@ This improves interpretability and helps the business focus on key customer beha
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[94]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[32]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># ============================================</span>
