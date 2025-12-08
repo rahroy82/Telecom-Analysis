@@ -3,3 +3,4 @@
 *.png
 *.pptx
 *.identifier
+.ipynb_checkpoints
